@@ -1,0 +1,106 @@
+<div class="main-container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <mat-card class="p-0">
+        <mat-card-header class="p-3" pp-color="primary">
+          Datepickers
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <p>Basic Datepicker</p>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <p>Datepicker Start date</p>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1 startView="year" [startAt]="startDate"></mat-datepicker>
+            </mat-form-field>
+
+            <p>Datepicker selected value</p>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker4" placeholder="Angular forms" [formControl]="date">
+              <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+              <mat-datepicker #picker4></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="ml-5">
+              <input matInput [matDatepicker]="picker2" placeholder="Angular forms (w/ deserialization)"
+                [formControl]="serializedDate">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker3" placeholder="Value binding" [value]="date.value">
+              <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+              <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+
+            <p>Datepicker with min and max value</p>
+            <mat-form-field class="example-full-width">
+              <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker5" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+              <mat-datepicker #picker5></mat-datepicker>
+            </mat-form-field>
+
+            <p>Datepicker with filters</p>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker6" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+              <mat-datepicker #picker6></mat-datepicker>
+            </mat-form-field>
+
+            <p>Datepicker input and change event</p>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker7" placeholder="Input & change events"
+                (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+              <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+              <mat-datepicker #picker7></mat-datepicker>
+            </mat-form-field>
+
+            <div class="example-events mb-3">
+              <div *ngFor="let e of events">{{e}}</div>
+            </div>
+
+            <p>Datepicker disabled</p>
+            <p>
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="dp1" placeholder="Completely disabled" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                <mat-datepicker #dp1></mat-datepicker>
+              </mat-form-field>
+            </p>
+
+
+            <mat-form-field>
+              <input matInput [matDatepicker]="dp2" placeholder="Popup disabled">
+              <mat-datepicker-toggle matSuffix [for]="dp2" disabled></mat-datepicker-toggle>
+              <mat-datepicker #dp2></mat-datepicker>
+            </mat-form-field>
+
+
+
+            <mat-form-field class="ml-5">
+              <input matInput [matDatepicker]="dp3" placeholder="Input disabled" disabled>
+              <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+              <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+            </mat-form-field>
+
+            <p>Datepicker open method</p>
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker8" placeholder="Choose a date">
+              <mat-datepicker #picker8></mat-datepicker>
+            </mat-form-field>
+            <button mat-raised-button (click)="picker8.open()">Open</button>
+          </form>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

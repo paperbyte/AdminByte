@@ -1,0 +1,56 @@
+<div class="main-container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <mat-card class="p-0">
+        <mat-card-header class="p-3" pp-color="primary">
+          List of items
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <h3>Simple List</h3>
+          <mat-list>
+            <mat-list-item role="listitem">Orange</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item role="listitem">Apple</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item role="listitem">Banana</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item role="listitem">Grapes</mat-list-item>
+          </mat-list>
+          <mat-divider></mat-divider>
+          <div class="mt-2">
+            <h3>Selected List</h3>
+            <mat-selection-list #shoes>
+              <mat-list-option *ngFor="let shoe of typesOfShoes">
+                {{shoe}}
+              </mat-list-option>
+            </mat-selection-list>
+
+            <p>
+              Options selected: {{shoes.selectedOptions.selected.length}}
+            </p>
+          </div>
+
+          <mat-divider></mat-divider>
+          <div>
+              <h3>List with sections</h3>
+            <mat-list>
+                <h3 mat-subheader>Folders</h3>
+                <mat-list-item *ngFor="let folder of folders">
+                  <mat-icon mat-list-icon>folder</mat-icon>
+                  <h4 mat-line>{{folder.name}}</h4>
+                  <p mat-line> {{folder.updated | date}} </p>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <h3 mat-subheader>Notes</h3>
+                <mat-list-item *ngFor="let note of notes">
+                  <mat-icon mat-list-icon>note</mat-icon>
+                  <h4 mat-line>{{note.name}}</h4>
+                  <p mat-line> {{note.updated | date}} </p>
+                </mat-list-item>
+              </mat-list>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
