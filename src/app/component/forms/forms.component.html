@@ -1,0 +1,403 @@
+<div class="main-container">
+  <div class="row px-5">
+    <div class="col-md-6">
+      <mat-card class="p-0">
+        <mat-card-header pp-color="primary" class="p-3">
+          Form Elements
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="E-mail">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Address">
+            </mat-form-field>
+
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Legacy form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Both a label and a placeholder</mat-label>
+              <input matInput placeholder="Simple placeholder">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Leave a comment"></textarea>
+            </mat-form-field>
+
+            <h3>Selects</h3>
+            <p>Basic mat-select</p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Favorite food</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <p>Basic native select</p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Cars</mat-label>
+              <select matNativeControl required>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </mat-form-field>
+            <p>Multiple select</p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Toppings</mat-label>
+              <mat-select [formControl]="toppings" multiple>
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <h3>Radio Button</h3>
+            <p>choose your option</p>
+            <mat-radio-group aria-label="Select an option" class="radio-flex">
+              <mat-radio-button value="1">Option 1</mat-radio-button>
+              <mat-radio-button value="2">Option 2</mat-radio-button>
+              <mat-radio-button value="3">Option 3</mat-radio-button>
+              <mat-radio-button value="4">Option 4</mat-radio-button>
+            </mat-radio-group>
+            <br>
+
+            <h3>Check box</h3>
+            <mat-checkbox>Check me!</mat-checkbox>
+            <mat-checkbox>Check me!</mat-checkbox>
+            <mat-checkbox>Check me!</mat-checkbox>
+            <mat-checkbox>Check me!</mat-checkbox> <br>
+
+            <h3>Slider</h3>
+            <p>Basic slider</p>
+            <mat-slider class="w-100"></mat-slider>
+            <p>Custom thumb slider</p>
+            <mat-slider class="w-100" thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="100000">
+            </mat-slider>
+
+            <h3>Slide toggle</h3>
+            <mat-slide-toggle>Slide me!</mat-slide-toggle>
+            <mat-slide-toggle>Slide me!</mat-slide-toggle>
+            <mat-slide-toggle>Slide me!</mat-slide-toggle>
+
+            <h3 class="mt-5">Badges</h3>
+
+
+            <p>
+              <span matBadge="4" matBadgeOverlap="false">Text with a badge</span>
+            </p>
+
+            <p>
+              Button with a badge on the left
+              <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+                Action
+              </button>
+            </p>
+
+            <p>
+              Icon with a badge
+              <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+              <!-- Include text description of the icon's meaning for screen-readers -->
+              <span class="cdk-visually-hidden">
+                Example with a home icon with overlaid badge showing the number 15
+              </span>
+            </p>
+
+            <h3 class="mt-5">Button-toggle</h3>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+              <mat-button-toggle value="bold">Bold</mat-button-toggle>
+              <mat-button-toggle value="italic">Italic</mat-button-toggle>
+              <mat-button-toggle value="underline">Underline</mat-button-toggle>
+            </mat-button-toggle-group>
+
+            <h3 class="mt-5">Chips</h3>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip>One fish</mat-chip>
+              <mat-chip>Two fish</mat-chip>
+              <mat-chip color="primary" selected>Primary fish</mat-chip>
+              <mat-chip color="accent" selected>Accent fish</mat-chip>
+            </mat-chip-list>
+
+            <h3 class="mt-5">Spinner</h3>
+            <mat-spinner></mat-spinner>
+
+            <h3 class="mt-5">Progress bar</h3>
+            <p>Determinate</p>
+            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+
+            <p>Indeterminate</p>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
+            <p>Buffer</p>
+            <mat-progress-bar mode="buffer"></mat-progress-bar>
+
+            <p>Query</p>
+            <mat-progress-bar mode="query"></mat-progress-bar>
+
+            <h3 class="mt-5">Tooltip</h3>
+            <div class="d-flex justify-content-around">
+              <button mat-raised-button matTooltip="tooltip position is left" matTooltipPosition="left"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+
+              <button mat-raised-button matTooltip="tooltip position is below" matTooltipPosition="below"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+              <button mat-raised-button matTooltip="tooltip position is above" matTooltipPosition="above"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+              <button mat-raised-button matTooltip="tooltip position is right" matTooltipPosition="right"
+                aria-label="Button that displays a tooltip when focused or hovered over">
+                Action
+              </button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-6">
+      <mat-card class="p-0">
+        <mat-card-header pp-color="primary" class="p-3">
+          credit card Forms
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder=" Your name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Card number</mat-label>
+              <input matInput placeholder="0000-0000-0000-0000" value="">
+            </mat-form-field>
+            <mat-form-field class="mr-3">
+              <mat-select placeholder="Select Month">
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+                <mat-option value="5">5</mat-option>
+                <mat-option value="6">6</mat-option>
+                <mat-option value="7">7</mat-option>
+                <mat-option value="8">8</mat-option>
+                <mat-option value="9">9</mat-option>
+                <mat-option value="10">10</mat-option>
+                <mat-option value="11">11</mat-option>
+                <mat-option value="12">12</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="mr-3">
+              <mat-select placeholder="Select year">
+                <mat-option value="2019">2019</mat-option>
+                <mat-option value="2020">2020</mat-option>
+                <mat-option value="2021">2021</mat-option>
+                <mat-option value="2022">2022</mat-option>
+                <mat-option value="2023">2023</mat-option>
+                <mat-option value="2024">2024</mat-option>
+                <mat-option value="2025">2025</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="CVV / CVC">
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-footer class="m-0 p-2 text-right" pp-color="primary">
+          <button mat-raised-button pp-color="success" class="mr-2">Submit</button>
+          <button mat-raised-button pp-color="warning" class="ml-auto">Reset</button>
+        </mat-card-footer>
+      </mat-card>
+
+      <mat-card class="p-0 mt-3">
+        <mat-card-header pp-color="primary" class="p-3">
+          Company Form
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Your company Name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>VAT</mat-label>
+              <input matInput placeholder="PL1234567890">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Street name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="City">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder=" Postal code">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Country">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <textarea rows="4" matInput placeholder="Leave a comment"></textarea>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-footer class="m-0 p-2 text-right" pp-color="primary">
+          <button mat-raised-button pp-color="success" class="mr-2">Submit</button>
+          <button mat-raised-button pp-color="warning" class="ml-auto">Reset</button>
+        </mat-card-footer>
+      </mat-card>
+
+      <mat-card class="p-0 mt-3">
+        <mat-card-header pp-color="primary" class="p-3">
+          Validation Form
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder=" your company Name" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>VAT</mat-label>
+              <input matInput placeholder="PL1234567890" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder=" street name" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="City" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder=" Postal code" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Country" required>
+            </mat-form-field>
+
+          </form>
+        </mat-card-content>
+        <mat-card-footer class="m-0 p-2 text-right" pp-color="primary">
+          <button mat-raised-button pp-color="success" class="mr-2">Submit</button>
+          <button mat-raised-button pp-color="warning" class="ml-auto">Reset</button>
+        </mat-card-footer>
+      </mat-card>
+
+      <mat-card class="p-0 mt-3">
+        <mat-card-header pp-color="primary" class="p-3">
+          Inline Form
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field class="">
+              <input matInput placeholder="Enter Email">
+            </mat-form-field>
+            <mat-form-field class="ml-5">
+              <input matInput placeholder="Enter Password">
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-footer class="m-0 p-2 text-right" pp-color="primary">
+          <button mat-raised-button pp-color="success" class="mr-2">Submit</button>
+          <button mat-raised-button pp-color="warning" class="ml-auto">Reset</button>
+        </mat-card-footer>
+      </mat-card>
+
+      <mat-card class="p-0 mt-3">
+        <mat-card-header pp-color="primary" class="p-3">
+          Appearance Form
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field appearance="fill" class="example-full-width">
+              <mat-label>Fill form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="example-full-width">
+              <mat-label>Outline form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="mr-5">
+              <mat-label>Fill form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+              <mat-label>Outline form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+          </form>
+        </mat-card-content>
+        <mat-card-footer class="m-0 p-2 text-right" pp-color="primary">
+          <button mat-raised-button pp-color="success" class="mr-2">Submit</button>
+          <button mat-raised-button pp-color="warning" class="ml-auto">Reset</button>
+        </mat-card-footer>
+      </mat-card>
+
+      <mat-card class="p-0 mt-3">
+        <mat-card-header pp-color="primary" class="p-3">
+          Prefix & Suffix
+        </mat-card-header>
+        <mat-card-content class="p-3">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <span matPrefix>+1 &nbsp;</span>
+              <input type="tel" matInput placeholder="Prefix">
+              <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <!-- <span matPrefix>+1 &nbsp;</span> -->
+              <input type="tel" matInput placeholder="Suffix">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <span matPrefix>+1 &nbsp;</span>
+              <input type="tel" matInput placeholder="Prefix & Suffix">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <span matPrefix>+1 &nbsp;</span>
+              <input type="tel" matInput placeholder="Suffix & button">
+              <button mat-raised-button color="primary" matSuffix [matMenuTriggerFor]="menu">basic <mat-icon>
+                  keyboard_arrow_down</mat-icon></button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+              </mat-menu>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+        <mat-card-footer class="m-0 p-2 text-right" pp-color="primary">
+          <button mat-raised-button pp-color="success" class="mr-2">Submit</button>
+          <button mat-raised-button pp-color="warning" class="ml-auto">Reset</button>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>
