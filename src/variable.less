@@ -1,0 +1,33 @@
+:root {
+  --main-color: #0a2c47;
+  --second-color: #2576bb;
+  --light-color: #677075;
+  --white-color: #ffffff;
+  --success:#4CAF50;
+  --warning:#dc3545;
+}
+
+[pp-color~="primary"] {
+  background-color: var(--main-color) !important;
+  color: var(--white-color);
+}
+
+[pp-color~="secondary"] {
+  background-color: var(--second-color) !important;
+  color: var(--white-color);
+}
+
+[pp-color~="light"] {
+  background-color: var(--light-color) !important;
+  color: var(--white-color);
+}
+
+[pp-color~="success"]{
+  background-color: var(--success);
+  color: var(--white-color);
+}
+
+[pp-color~="warning"]{
+  background-color: var(--warning);
+  color: var(--white-color);
+}
