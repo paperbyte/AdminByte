@@ -9,7 +9,6 @@ import { FilterTableComponent } from './component/tables/filter-table/filter-tab
 import { LoginComponent } from './template/login/login.component';
 import { SignupComponent } from './template/signup/signup.component';
 import { CardComponent } from './component/card/card.component';
-import { ExpansionPanelComponent } from './component/expansion-panel/expansion-panel.component';
 import { StepperComponent } from './component/stepper/stepper.component';
 import { BottomSheetComponent } from './component/modal-popup/bottom-sheet/bottom-sheet.component';
 import { DialogComponent } from './component/modal-popup/dialog/dialog.component';
@@ -37,7 +36,6 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'card',component:CardComponent},
-  {path:'expansion-panel',component:ExpansionPanelComponent},
   {path:'stepper',component:StepperComponent},
   {path:'bottomsheet',component:BottomSheetComponent},
   {path:'dialog',component:DialogComponent},
