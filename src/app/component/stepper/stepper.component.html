@@ -1,14 +1,14 @@
 <div class="main-container">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
+  <div class="row px-3">
+    <div class="col-md-6">
       <mat-card class="p-0">
-        <mat-card-header pp-color="primary" class="p-3">
+        <mat-card-header ab-color="primary" class="p-3">
           Horizontal Stepper
         </mat-card-header>
         <mat-card-content class="p-3">
-          <button mat-raised-button pp-color="light" (click)="isLinear = !isLinear" id="toggle-linear">
+          <!-- <button mat-raised-button ab-color="light" (click)="isLinear = !isLinear" id="toggle-linear">
             {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-          </button>
+          </button> -->
           <mat-horizontal-stepper [linear]="isLinear" #stepper>
             <mat-step [stepControl]="firstFormGroup">
               <form [formGroup]="firstFormGroup">
@@ -47,15 +47,15 @@
       </mat-card>
     </div>
 
-    <div class="col-md-6 offset-md-3">
-      <mat-card class="p-0 mt-5">
-        <mat-card-header pp-color="primary" class="p-3">
+    <div class="col-md-6">
+      <mat-card class="p-0">
+        <mat-card-header ab-color="primary" class="p-3">
           Vertical Stepper
         </mat-card-header>
         <mat-card-content class="p-3">
-          <button mat-raised-button pp-color="light" (click)="isLinear = !isLinear" id="toggle-linear">
+          <!-- <button mat-raised-button ab-color="light" (click)="isLinear = !isLinear" id="toggle-linear">
             {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-          </button>
+          </button> -->
           <mat-vertical-stepper [linear]="isLinear" #stepper>
             <mat-step [stepControl]="firstFormGroup">
               <form [formGroup]="firstFormGroup">
