@@ -1,9 +1,9 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar pp-color="primary" class="example-toolbar">
+  <mat-toolbar ab-color="primary" class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="example-app-name">HR Management</h1>
+    <h1 class="example-app-name">AdminByte</h1>
     <!-- <div class="dropdown ml-auto">
     <img src="assets/download.png" alt="" class="w-24 ml-auto">
     <div class="dropdown-content">
@@ -23,7 +23,7 @@
       <button mat-menu-item>Item 4</button> -->
       <mat-list>
         <mat-card class="p-0">
-          <mat-card-header class="p-1" pp-color="secondary">
+          <mat-card-header class="p-1" ab-color="secondary">
             You have five notification
           </mat-card-header>
           <mat-card-content>
@@ -125,13 +125,6 @@
             <a mat-list-item [routerLink]="[ '/error404']">Error 404</a>
             <mat-divider></mat-divider>
             <a mat-list-item [routerLink]="[ '/error505']">Error 500</a>
-          </mat-expansion-panel>
-
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              Expansion-panel
-            </mat-expansion-panel-header>
-            <a mat-list-item [routerLink]="[ '/expansion-panel']">Expansion panel</a>
           </mat-expansion-panel>
 
           <mat-expansion-panel>

@@ -15,7 +15,6 @@ import { FilterTableComponent } from './component/tables/filter-table/filter-tab
 import { LoginComponent } from './template/login/login.component';
 import { SignupComponent } from './template/signup/signup.component';
 import { CardComponent } from './component/card/card.component';
-import { ExpansionPanelComponent } from './component/expansion-panel/expansion-panel.component';
 import { StepperComponent } from './component/stepper/stepper.component';
 import { BottomSheetComponent, SheetDialog } from './component/modal-popup/bottom-sheet/bottom-sheet.component';
 import { DialogComponent,DialogContentExampleDialog} from './component/modal-popup/dialog/dialog.component';
@@ -48,7 +47,6 @@ import { InvoiceComponent } from './component/invoice/invoice.component';
     LoginComponent,
     SignupComponent,
     CardComponent,
-    ExpansionPanelComponent,
     StepperComponent,
     BottomSheetComponent,
     DialogComponent,

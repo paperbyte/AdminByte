@@ -1,12 +1,12 @@
-<div class="container main-container">
-  <div class="row">
+<div class="main-container">
+  <div class="row px-3">
     <div class="col-md-12">
       <mat-card class="p-0">
-        <mat-card-header class="p-2 d-flex align-items-center" pp-color="light">
+        <mat-card-header class="p-2 d-flex align-items-center" ab-color="light">
           Invoice
           <div class="ml-auto">
-            <button mat-raised-button pp-color="success">Save</button>
-            <button mat-raised-button pp-color="secondary" class="ml-2">Print</button>
+            <button mat-raised-button ab-color="success">Save</button>
+            <button mat-raised-button ab-color="secondary" class="ml-2">Print</button>
           </div>
         </mat-card-header>
         <mat-card-content class="p-3">
@@ -34,7 +34,7 @@
                 VAT: PL9877281777
                 Account Name: BootstrapMaster.com
                 SWIFT code: 99 8888 7777 6666 5555</p>
-            </div>ƒ
+            </div>
           </div>
           <mat-divider></mat-divider>
           <div class="table-responsive">
@@ -110,7 +110,7 @@
                   <tr mat-row *matRowDef="let row; columns: displayedTotal;"></tr>
                 </table>
               </div>
-              <button mat-raised-button pp-color="primary" class="mt-2 float-right">Proceed to payment</button>
+              <button mat-raised-button ab-color="success" class="mt-3 float-right">Proceed to payment <mat-icon>arrow_forward</mat-icon></button>
             </div>
           </div>
         </mat-card-content>

@@ -1,8 +1,8 @@
 <div class="main-container">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
+  <div class="row px-3">
+    <div class="col-md-12">
       <mat-card class="p-0">
-        <mat-card-header class="p-3" pp-color="primary">
+        <mat-card-header class="p-3" ab-color="primary">
           Menu buttons
         </mat-card-header>
         <mat-card-content class="p-3">
@@ -17,28 +17,7 @@
             </div>
 
             <div>
-              <h3 >Menu with icons</h3>
-              <button mat-icon-button [matMenuTriggerFor]="menu2" aria-label="Example icon-button with a menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #menu2="matMenu">
-                <button mat-menu-item>
-                  <mat-icon>dialpad</mat-icon>
-                  <span>Redial</span>
-                </button>
-                <button mat-menu-item disabled>
-                  <mat-icon>voicemail</mat-icon>
-                  <span>Check voice mail</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Disable alerts</span>
-                </button>
-              </mat-menu>
-            </div>
-
-            <div>
-              <h3 >Nested menu</h3>
+              <h3>Nested menu</h3>
               <button mat-button [matMenuTriggerFor]="animals">Animal index</button>
 
               <mat-menu #animals="matMenu">
@@ -87,6 +66,29 @@
                 <button mat-menu-item disabled>Velociraptor</button>
               </mat-menu>
             </div>
+
+            <div>
+              <h3>Menu with icons</h3>
+              <button mat-icon-button [matMenuTriggerFor]="menu2" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu2="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+            </div>
+
+
           </div>
 
         </mat-card-content>
